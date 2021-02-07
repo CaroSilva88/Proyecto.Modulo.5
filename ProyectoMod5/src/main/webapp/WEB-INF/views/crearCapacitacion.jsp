@@ -60,6 +60,13 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/crearVisita">Crear</a>
 	                                </div>
                             </li>
+                            <li class="dropdown">
+                            	<a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Pago </a>
+	                                <div class="dropdown-menu" role="menu">
+	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/listarPago">Listar</a>
+	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/crearPago">Crear</a>
+	                                </div>
+                            </li>
                             <li class="nav-item" role="presentation">
                             	<a class="nav-link" href="#">Contacto</a>
                             </li>

@@ -1,7 +1,5 @@
-
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
-
 <html>
 <head>
   <!-- JavaScript Bundle with Popper -->
@@ -12,7 +10,7 @@ integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroa
 integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
 <meta charset="ISO-8859-1">
-<title>Listado de Capacitaciones</title>
+<title>Listado de Pagos</title>
 	<link rel="stylesheet" href="resources/css/estilos.css" type="text/css">	
 </head>
 <body>
@@ -30,29 +28,28 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
         <div class="header-dark">
             <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
                 <div class="container">
-                	<a class="navbar-brand" href="#">Listado de Capacitaciones</a>
+                	<a class="navbar-brand" href="#">Listado de Pagos</a>
 					<button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
 						<span class="sr-only">Menu de navegacion</span><span class="navbar-toggler-icon"></span>
 					</button>
                     <div class="collapse navbar-collapse" id="navcol-1">
                         <ul class="nav navbar-nav">
-                      <!--   <li class="nav-item" role="presentation">
-                            	<a class="nav-link" href="#">Usuario</a>
-                            </li> -->     
+    
                             <li class="dropdown">
                             	<a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Usuario </a>
 	                                <div class="dropdown-menu" role="menu">
-	                                	<a class="dropdown-item" role="presentation" href="#">Listado de Usuarios</a>
+	                                	<a class="dropdown-item" role="presentation" href="#">Listado de Pagos</a>
 	                                	<a class="dropdown-item" role="presentation" href="#">Nuevo</a>
 	                                </div>
-                            </li>
-                            <li class="dropdown">
-                            	<a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Capacitación </a>
+                          
+                           <li class="dropdown">
+                            	<a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Capacitacion</a>
 	                                <div class="dropdown-menu" role="menu">
 	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/Listarcapacitacion">Listar</a>
 	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/crearCapacitacion">Crear</a>
 	                                </div>
                             </li>
+                            
                             <li class="dropdown">
                             	<a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Visitas </a>
 	                                <div class="dropdown-menu" role="menu">
@@ -60,6 +57,8 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/crearVisita">Crear</a>
 	                                </div>
                             </li>
+                           
+                    
                             <li class="dropdown">
                             	<a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Pago </a>
 	                                <div class="dropdown-menu" role="menu">
@@ -67,6 +66,7 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/crearPago">Crear</a>
 	                                </div>
                             </li>
+                           
                             <li class="nav-item" role="presentation">
                             	<a class="nav-link" href="#">Contacto</a>
                             </li>
@@ -94,7 +94,7 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 
       <div class="encabezado">
 
-        <h1>Listado de Capacitaciones</h1>
+        <h1>Listado de Pagos</h1>
 
       </div>
 
@@ -104,35 +104,33 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 		<table class="tabla">
 			<thead>
 			<tr class="campos">
-				<th>Duracion</th>
-				<th>Fecha de capacitación</th> 
-				<th>Hora de capacitación</th>
-				<th>Lugar de Capacitacion</th>
-				<th>Cliente</th>
-				<th>Id de capacitación</th>
+				<tr>
+					<th>ID </th>
+					<th>Fecha</th>
+					<th>Monto </th>
+					<th>Mes que paga </th>
+					<th>Año que paga </th>
+					<th>Cliente ></th>
+				</tr>
 				
-			</tr>
+			
 			</thead>
 			
 			<tbody>
-				<c:forEach var="c" items="${capacitacion}">
+				<c:forEach var="p" items="${pago}">
 					<tr>
-						<th><c:out value="${c.getCapduracion()}"></c:out></th>
-						<td><c:out value="${c.getCapfecha()}"></c:out></td>
-						<td><c:out value="${c.getCaphora()}"></c:out></td>
-						<td><c:out value="${c.getCaplugar()}"></c:out></td>
-						<td><c:out value="${c.getRutcliente()}"></c:out></td>
-						<td><c:out value="${c.getIdcapacitacion()}"></c:out></td>
-
+					<td><c:out value="${p.getId_pago_cliente()}"></c:out>
+					<td><c:out value="${p.getFecha_pago()}"></c:out>
+					<td><c:out value="${p.getMonto_pago()}"></c:out>
+					<td><c:out value="${p.getMes_que_paga()}"></c:out>
+					<td><c:out value="${p.getAno_que_paga()}"></c:out>
+					<td><c:out value="${p.getCliente_rutcliente()}"></c:out>
 					</tr>
 				</c:forEach>
-
-				
 			</tbody>
-
 	   	</table>	
 	</div>
 	<br><br>
-	<a class="btn-btn-info" href="${pageContext.request.contextPath}/crearCapacitacion">Nueva Capacitacion</a>
+	<a class="btn-btn-info" href="${pageContext.request.contextPath}/crearPago">Nuevo Pago</a>
 </body>
 </html>
