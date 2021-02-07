@@ -10,10 +10,13 @@ integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroa
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
 integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 <meta charset="ISO-8859-1">
-<link rel="stylesheet" href="resources/css/estilos.css" type="text/css">	
+<link rel="stylesheet" href="resources/css/estilos.css" type="text/css">
+<script src="js/jquery-3.5.1.min.js"></script>	
 <title>Visitas realizadas</title>
 </head>
 <body>
+
+        
     <body>
     
       <div class="superior">
@@ -36,9 +39,7 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 					</button>
                     <div class="collapse navbar-collapse" id="navcol-1">
                         <ul class="nav navbar-nav">
-                      <!--   <li class="nav-item" role="presentation">
-                            	<a class="nav-link" href="#">Usuario</a>
-                            </li> -->     
+    
                             <li class="dropdown">
                             	<a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Usuario </a>
 	                                <div class="dropdown-menu" role="menu">
@@ -62,6 +63,9 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
                             </li>
                             <li class="nav-item" role="presentation">
                             	<a class="nav-link" href="#">Contacto</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                            	<a class="nav-link" href="${pageContext.request.contextPath}/">Home</a>
                             </li>
                         </ul>
                         <form class="form-inline mr-auto" target="_self"></form>
@@ -116,87 +120,81 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 						<label for="cliente">Cliente:</label>
 						<input type="number" id="cliente" name="rutcliente" placeholder="CLIENTE" required/>
                     </div>
-                     
+                     <br><br>
+                     <h3>Chequeos Realizados en la visita</h3><br><br>
                     <div class="form-check">
-  						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="chequeo">
  						 <label class="form-check-label" for="flexCheckDefault">
    								Temperaturas
   						</label>
 					</div>
 					<div class="form-check">
- 						 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+ 						 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="chequeo">
   						 <label class="form-check-label" for="flexCheckDefault">
    									 Zona Limpia
   						 </label>
 					</div>
 					 <div class="form-check">
-  						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="chequeo">
  						 <label class="form-check-label" for="flexCheckDefault">
    								 Uso Mascarilla
   						</label>
 					</div>
 					<div class="form-check">
- 						 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+ 						 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="chequeo">
   						 <label class="form-check-label" for="flexCheckDefault">
    									 Contaminacion cruzada
   						 </label>
 					</div>
 					                    <div class="form-check">
-  						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="chequeo">
  						 <label class="form-check-label" for="flexCheckDefault">
    								Sanitizacion
   						</label>
 					</div>
 					<div class="form-check">
- 						 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+ 						 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="chequeo">
   						 <label class="form-check-label" for="flexCheckDefault">
    									 Limpieza camarines
   						 </label>
 					</div>
 					                    <div class="form-check">
-  						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="chequeo">
  						 <label class="form-check-label" for="flexCheckDefault">
    								 Procedimiento de lavado de manos
   						</label>
 					</div>
 					<div class="form-check">
- 						 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+ 						 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="chequeo">
   						 <label class="form-check-label" for="flexCheckDefault">
    									 Limpieza de pisos
   						 </label>
 					</div>
 					<div class="form-check">
- 						 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+ 						 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="chequeo">
   						 <label class="form-check-label" for="flexCheckDefault">
    									 Uso correcto de alcohol gel y desinfectantes
   						 </label>
 					</div>					
 					<div class="form-check">
- 						 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+ 						 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="chequeo">
   						 <label class="form-check-label" for="flexCheckDefault">
    									Control de inventario y fechas
   						 </label>
 					</div>					
-					<br><br>
-					<div>
-					<button>Guardar Chequeos</button>
-					</div>
-					<br><br>
-					<div class="form-floating">
-  						<textarea class="form-control" placeholder="#" id="floatingTextarea2" style="height: 100px"></textarea>
-  						<label for="floatingTextarea2">Comments</label>
-					</div>
+
 					<br><br>
                     <div class="input-group">
                          <span class="input-group-text">Comentarios</span>
                          <textarea class="form-control" aria-label="With textarea" name="viscomentarios"></textarea>
                     </div>
 
+
                 <div class="botones">
-                    <button  type="submit" id="boton-enviar" >Enviar</button>
+                    <button  type="submit" id="boton-enviar" >Guardar Datos</button>
                 </div>
-               </form>
-            </div>
+            </form>
+          </div>
         </div>
     </body>
 </body>

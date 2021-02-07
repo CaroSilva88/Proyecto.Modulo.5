@@ -63,6 +63,9 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
                             <li class="nav-item" role="presentation">
                             	<a class="nav-link" href="#">Contacto</a>
                             </li>
+                            <li class="nav-item" role="presentation">
+                            	<a class="nav-link" href="${pageContext.request.contextPath}/">Home</a>
+                            </li>
                         </ul>
                         <form class="form-inline mr-auto" target="_self"></form>
                         <span class="navbar-text">

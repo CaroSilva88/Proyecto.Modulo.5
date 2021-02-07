@@ -8,14 +8,18 @@ import javax.persistence.Id;
 @Entity
 public class Visita {
 	
-	@Id
-	private int idvisita;
+	
+	@Column(name="cliente_rutcliente")
+	private int rutcliente;
+	private String viscomentarios;
 	private String visfecha;
 	private String vishora;
 	private String vislugar;
-	private String viscomentarios;
-	@Column(name="cliente_rutcliente")
-	private int rutcliente;
+	@Id
+	private int idvisita;
+
+
+
 	
 	
 	/*****************************

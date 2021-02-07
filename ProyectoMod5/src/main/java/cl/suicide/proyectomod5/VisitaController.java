@@ -42,22 +42,25 @@ public class VisitaController {
 
 	}
 	
-	
+
 	/********************
 	 *   CREAR VISITA
 	 ********************/
 	
 	@RequestMapping(value="/crearVisita", method = RequestMethod.GET)
-	public String nuevacapa(ModelMap model) {
+	public String nuevavisi(ModelMap model) {
 		
-		model.put("visita", new Visita());
+		model.put("visitas", new Visita());
 		
 		return"crearVisita";
 	}
-
 	
-	@RequestMapping(value="/visitacreada", method=RequestMethod.POST)
-	public String crear(Visita visita,
+	/**************************
+	 *      VISITA CREADA 
+	 **************************/
+	
+	@RequestMapping(value="/visitacreada", method = RequestMethod.POST)
+	public String VisiCreada(Visita visita,
 			BindingResult bindingResult, ModelMap model) {
 		
 			visi.save(visita);
@@ -65,5 +68,21 @@ public class VisitaController {
 			model.put("visita", visita);
 			
 			return"redirect:/Listarvisita";
+	}
+	
+	/**************************
+	 * VISITA (Redireccion)
+	 **************************/
+
+	
+	@RequestMapping(value="/mostrarVisitaCreada", method=RequestMethod.POST)
+	public String crear(Visita visita, ModelMap model) {
+		
+			model.put("visita", visita);
+			
+			return"redirect:/visitacreada";
 		}
+	
+	
+
 }

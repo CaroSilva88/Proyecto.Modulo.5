@@ -36,15 +36,12 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
         <div class="header-dark">
             <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
                 <div class="container">
-                	<a class="navbar-brand" href="#">Listado de Capacitaciones</a>
+                	<a class="navbar-brand" href="#">Listado de Visitas</a>
 					<button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
 						<span class="sr-only">Menu de navegacion</span><span class="navbar-toggler-icon"></span>
 					</button>
                     <div class="collapse navbar-collapse" id="navcol-1">
-                        <ul class="nav navbar-nav">
-                      <!--   <li class="nav-item" role="presentation">
-                            	<a class="nav-link" href="#">Usuario</a>
-                            </li> -->     
+                        <ul class="nav navbar-nav">   
                             <li class="dropdown">
                             	<a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Usuario </a>
 	                                <div class="dropdown-menu" role="menu">
@@ -67,7 +64,10 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 	                                </div>
                             </li>
                             <li class="nav-item" role="presentation">
-                            	<a class="nav-link" href="#">Contacto</a>
+                            	<a class="nav-link" href="">Contacto</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                            	<a class="nav-link" href="${pageContext.request.contextPath}/">Home</a>
                             </li>
                         </ul>
                         <form class="form-inline mr-auto" target="_self"></form>
@@ -91,7 +91,7 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
       
       <div class="encabezado">
 
-        <h1>Listado de Capacitaciones</h1>
+        <h1>Listado de Visitas</h1>
 
       </div>
 
@@ -101,12 +101,12 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 			<thead>
 		
 				<tr class="campos">
-					<th>ID</th>
-					<th>Fecha</th> 
+					<th>Cliente</th>
+					<th>Comentarios</th> 
+					<th>Fecha</th>
 					<th>Hora</th>
 					<th>Dirección</th>
-					<th>Comentarios</th>
-					<th>Cliente</th>
+					<th>ID Visita</th>
 				
 				</tr>
 			</thead>
@@ -114,12 +114,12 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 			<tbody>
 				<c:forEach var="v" items="${visita}">
 					<tr>
-						<th><c:out value="${v.getIdvisita }"></c:out></th>
-						<th><c:out value="${v.getVisfecha }"></c:out></th>
-						<th><c:out value="${v.getVishora }"></c:out></th>
-						<th><c:out value="${v.getVislugar }"></c:out></th>
-						<th><c:out value="${v.getViscomentarios }"></c:out></th>
-						<th><c:out value="${v.getRutcliente }"></c:out></th>
+						<th><c:out value="${v.getRutcliente()}"></c:out></th>
+						<th><c:out value="${v.getViscomentarios()}"></c:out></th>
+						<th><c:out value="${v.getVisfecha()}"></c:out></th>
+						<th><c:out value="${v.getVishora()}"></c:out></th>
+						<th><c:out value="${v.getVislugar()}"></c:out></th>
+						<th><c:out value="${v.getIdvisita()}"></c:out></th>
 					</tr>
 
 				</c:forEach>

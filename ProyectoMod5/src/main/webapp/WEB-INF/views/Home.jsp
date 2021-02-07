@@ -51,8 +51,18 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/crearCapacitacion">Crear</a>
 	                                </div>
                             </li>
+                            <li class="dropdown">
+                            	<a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Visitas </a>
+	                                <div class="dropdown-menu" role="menu">
+	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/Listarvisita">Listar</a>
+	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/crearVisita">Crear</a>
+	                                </div>
+                            </li>
                             <li class="nav-item" role="presentation">
                             	<a class="nav-link" href="#">Contacto</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                            	<a class="nav-link" href="${pageContext.request.contextPath}/">Home</a>
                             </li>
                         </ul>
                         <form class="form-inline mr-auto" target="_self"></form>
