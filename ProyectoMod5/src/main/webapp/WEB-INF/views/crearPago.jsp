@@ -1,5 +1,6 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
 <html>
 <head>
   <!-- JavaScript Bundle with Popper -->
@@ -8,48 +9,50 @@ integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroa
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
 integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
 <meta charset="ISO-8859-1">
-<title>Listado de Pagos</title>
-	<link rel="stylesheet" href="resources/css/estilos.css" type="text/css">	
+<link rel="stylesheet" href="resources/css/estilos.css" type="text/css">	
+<title>Registro de Pago</title>
 </head>
 <body>
-	<div class="superior">
+    <body>
+    
+      <div class="superior">
 
         <h1>SeguClap</h1>
 
-     </div>
+      </div>
 
-     <div class="menunav">
+      <div class="menunav">
 
-        <!--  inicio  -->                              
+                <!--  inicio  -->                              
  
     <div>
         <div class="header-dark">
             <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
                 <div class="container">
-                	<a class="navbar-brand" href="#">Listado de Pagos</a>
+                	<a class="navbar-brand" href="#">Crear Pago</a>
 					<button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
 						<span class="sr-only">Menu de navegacion</span><span class="navbar-toggler-icon"></span>
 					</button>
                     <div class="collapse navbar-collapse" id="navcol-1">
                         <ul class="nav navbar-nav">
-    
+                      <!--   <li class="nav-item" role="presentation">
+                            	<a class="nav-link" href="#">Usuario</a>
+                            </li> -->     
                             <li class="dropdown">
                             	<a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Usuario </a>
 	                                <div class="dropdown-menu" role="menu">
-	                                	<a class="dropdown-item" role="presentation" href="#">Listado de Pagos</a>
+	                                	<a class="dropdown-item" role="presentation" href="#">Listado de Usuarios</a>
 	                                	<a class="dropdown-item" role="presentation" href="#">Nuevo</a>
 	                                </div>
-                          
-                           <li class="dropdown">
-                            	<a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Capacitacion</a>
+                            </li>
+                            <li class="dropdown">
+                            	<a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Capacitación </a>
 	                                <div class="dropdown-menu" role="menu">
 	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/Listarcapacitacion">Listar</a>
 	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/crearCapacitacion">Crear</a>
 	                                </div>
                             </li>
-                            
                             <li class="dropdown">
                             	<a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Visitas </a>
 	                                <div class="dropdown-menu" role="menu">
@@ -57,8 +60,7 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/crearVisita">Crear</a>
 	                                </div>
                             </li>
-                           
-                    
+                            
                             <li class="dropdown">
                             	<a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Pago </a>
 	                                <div class="dropdown-menu" role="menu">
@@ -66,7 +68,7 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/crearPago">Crear</a>
 	                                </div>
                             </li>
-                           
+                            
                             <li class="nav-item" role="presentation">
                             	<a class="nav-link" href="#">Contacto</a>
                             </li>
@@ -88,49 +90,56 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script> 
                      
- <!--  fin  -->        
+ <!--  fin  --> 
       </div>
 <br><br>
 
       <div class="encabezado">
 
-        <h1>Listado de Pagos</h1>
+        <h1>Registro de Pago</h1>
 
       </div>
-
-	<div class="medio">
-
-		
-		<table class="tabla">
-			<thead>
-			<tr class="campos">
-				<tr>
-					<th>ID </th>
-					<th>Fecha</th>
-					<th>Monto </th>
-					<th>Mes que paga </th>
-					<th>Año que paga </th>
-					<th>Cliente ></th>
-				</tr>
+    
+        <div class="contenedor">
+            <div class="formulario">
+				<form method="post" action="${pageContext.request.contextPath}/pagocreado" id="formulario">
+					<br><br>
+                    <div class="en-linea izquierdo">
+						<label for="id_pago_cliente">ID Pago:</label>
+						<input type="number" id="id_pago_cliente" name="id_pago_cliente" placeholder="ID DE PAGO" required/>
+                    </div>
+					<br><br>
+                    <div class="en linea">
+						<label for="fecha_pago">Fecha:</label>
+                        <input type="text" id="fecha_pago" name="fecha_pago" placeholder="fecha pago" required/>
+					</div>
+                <div class="campo">
+                	<div class="en-linea izquierdo">
+						<label for="monto_pago">Monto:</label>
+						<input type="text" id="monto_pago" name="monto_pago" placeholder="monto pago" required/>
+				    </div>
+                    <br><br>
+					<div class="en linea">
+						<label for=" mes_que_paga">Mes:</label>
+                        <input type="text" id="mes_que_paga" name="mes_que_paga" placeholder=" mes que paga" required/>
+					</div>
+				</div>
+				     <div class="en-linea">
+						<label for="ano_que_paga">Año:</label>
+						<input type="number" id="ano_que_paga" name="ano_que_paga" placeholder="ano que paga" required/>
+                    </div> 
 				
-			
-			</thead>
-			
-			<tbody>
-				<c:forEach var="p" items="${pago}">
-					<tr>
-					<td><c:out value="${p.getId_pago_cliente()}"></c:out></td>
-					<td><c:out value="${p.getFecha_pago()}"></c:out></td>
-					<td><c:out value="${p.getMonto_pago()}"></c:out></td>
-					<td><c:out value="${p.getMes_que_paga()}"></c:out></td>
-					<td><c:out value="${p.getAno_que_paga()}"></c:out></td>
-					<td><c:out value="${p.getRutcliente()}"></c:out></td>
-					</tr>
-				</c:forEach>
-			</tbody>
-	   	</table>	
-	</div>
-	<br><br>
-	<a class="btn-btn-info" href="${pageContext.request.contextPath}/crearPago">Nuevo Pago</a>
+                    <div class="campo">
+                         <label for="rutcliente">Cliente:</label>
+                         <input type="number" id="rutcliente" name="rutcliente" placeholder="Rut Cliente" required/>
+                    </div>
+
+                <div class="botones">
+                    <button  type="submit" id="boton-enviar" >Enviar</button>
+                </div>
+               </form>
+            </div>
+        </div>
+    </body>
 </body>
 </html>

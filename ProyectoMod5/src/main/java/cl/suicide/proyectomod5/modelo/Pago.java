@@ -1,6 +1,5 @@
 package cl.suicide.proyectomod5.modelo;
 
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,7 +12,7 @@ public class Pago {
 
 	@Id
 	private int id_pago_cliente;
-	private Date fecha_pago;
+	private String fecha_pago;
 	private int monto_pago;
 	private String mes_que_paga;
 	private String ano_que_paga;
@@ -35,7 +34,7 @@ public class Pago {
 	 *****************************/
 
 
-	public Pago(int id_pago_cliente, Date fecha_pago, int monto_pago, String mes_que_paga, String ano_que_paga,
+	public Pago(int id_pago_cliente, String fecha_pago, int monto_pago, String mes_que_paga, String ano_que_paga,
 			String rutcliente) {
 		super();
 		this.id_pago_cliente = id_pago_cliente;
@@ -62,13 +61,13 @@ public class Pago {
 
 
 
-	public Date getFecha_pago() {
+	public String getFecha_pago() {
 		return fecha_pago;
 	}
 
 
 
-	public void setFecha_pago(Date fecha_pago) {
+	public void setFecha_pago(String fecha_pago) {
 		this.fecha_pago = fecha_pago;
 	}
 

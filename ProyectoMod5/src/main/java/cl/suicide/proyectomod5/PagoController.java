@@ -53,7 +53,7 @@ public class PagoController {
 			
 			model.put("pago",pago);
 			
-			return"redirect:/ListarPago";
+			return"redirect:/listarPago";
 		}
 
 }
