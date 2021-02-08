@@ -17,10 +17,12 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
     <body>
     
       <div class="superior">
-
+<br><br>
         <h1>SeguClap</h1>
+        <h3>"Soluciones a tu medida"</h3>
+<br><br>
 
-      </div>
+     
 
       <div class="menunav">
 
@@ -90,6 +92,7 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
                      
  <!--  fin  --> 
       </div>
+  </div>
 <br><br>
 
       <div class="encabezado">

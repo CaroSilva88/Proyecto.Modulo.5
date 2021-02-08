@@ -20,10 +20,11 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
     <body>
     
       <div class="superior">
-
+<br><br>
         <h1>SeguClap</h1>
+<h3>"Soluciones a tu medida"</h3>
 
-      </div>
+<br><br>
 
       <div class="menunav">
 
@@ -90,6 +91,8 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script> 
                      
  <!--  fin  --> 
+ 
+      </div>
       </div>
 <br><br>
 

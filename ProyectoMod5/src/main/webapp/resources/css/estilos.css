@@ -3,18 +3,19 @@
 @charset "ISO-8859-1";
 
 body {
-    background-color: #d3d3d3;
+    background-color: rgb(205, 205, 205);
     color: black;
     font-family: Verdana, Sans-serif;
     font-size: 1.2em;
+    width: 75%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    border-width: medium;
 }
 
 .encabezado{
 	text-align: center;
-}
-
-.menunav{
-	text-aling:center;
 }
 
 .superior{
@@ -34,16 +35,15 @@ h1 {
 
 .tabla,
 .datos{
-    background-color: rgb(255, 251, 189);
-    border: 1px solid #000000;
+
+
     margin: 2em auto;
     width: 100%;
     TEXT-ALIGN: CENTER;
 
 }
 .campos{
-    background-color: rgb(245, 241, 33);
-    border: 1px solid #dbd57a;
+
     margin: 2em auto;
     width: 100%;
     TEXT-ALIGN: CENTER;
@@ -116,12 +116,13 @@ body{
 
 p {margin: 1em 00;
     color: black;
+    
 }
 
 .parrafo {
-    background-color: #CCCCCC;
+    
     color: #2c363d;
-
+text-align: justify;
 }
 
 

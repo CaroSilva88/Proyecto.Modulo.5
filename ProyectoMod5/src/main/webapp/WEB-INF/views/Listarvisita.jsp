@@ -23,10 +23,11 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 <body class="usuarios">
 
 	<div class="superior">
-
+ <br><br>
         <h1>SeguClap</h1>
 
-     </div>
+ <br><br>
+ 
 	
 	<div class="menunav">
 
@@ -93,6 +94,7 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
                      
  <!--  fin  -->        
       </div>
+           </div>
       
       <br><br>
       
@@ -104,7 +106,7 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 
 	<div class="medio">
 		
-		<table class="tabla">
+		<table class="table table-striped">
 			<thead>
 		
 				<tr class="campos">

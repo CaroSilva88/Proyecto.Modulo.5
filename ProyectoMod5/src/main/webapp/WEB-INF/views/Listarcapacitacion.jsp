@@ -15,14 +15,17 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 <title>Listado de Capacitaciones</title>
 	<link rel="stylesheet" href="resources/css/estilos.css" type="text/css">	
 </head>
-<body>
+
 	<div class="superior">
-
+<br><br>
         <h1>SeguClap</h1>
-
-     </div>
+        <h3>"Soluciones a tu medida"</h3>
+ 
+    
 
      <div class="menunav">
+    
+     <br><br>
 
         <!--  inicio  -->                              
  
@@ -90,18 +93,22 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
                      
  <!--  fin  -->        
       </div>
-<br><br>
+      
+      </div>
+
 
       <div class="encabezado">
-
+<br><br>
         <h1>Listado de Capacitaciones</h1>
 
       </div>
+<br><br>
 
+<body>
 	<div class="medio">
 
 		
-		<table class="tabla">
+		<table class="table table-striped">
 			<thead>
 			<tr class="campos">
 				<th>Duracion</th>
@@ -132,6 +139,5 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 	   	</table>	
 	</div>
 	<br><br>
-	<a class="btn-btn-info" href="${pageContext.request.contextPath}/crearCapacitacion">Nueva Capacitacion</a>
 </body>
 </html>

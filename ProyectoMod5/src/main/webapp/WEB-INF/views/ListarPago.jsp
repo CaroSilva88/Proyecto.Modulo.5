@@ -15,11 +15,12 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 </head>
 <body>
 	<div class="superior">
-
+<br><br>
         <h1>SeguClap</h1>
 
-     </div>
 
+<br><br>
+<br><br>
      <div class="menunav">
 
         <!--  inicio  -->                              
@@ -90,6 +91,7 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
                      
  <!--  fin  -->        
       </div>
+           </div>
 <br><br>
 
       <div class="encabezado">
@@ -97,11 +99,11 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
         <h1>Listado de Pagos</h1>
 
       </div>
-
+<br><br>
 	<div class="medio">
 
 		
-		<table class="tabla">
+		<table class="table table-striped">
 			<thead>
 			<tr class="campos">
 				<tr>
@@ -110,7 +112,7 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 					<th>Monto </th>
 					<th>Mes que paga </th>
 					<th>Año que paga </th>
-					<th>Cliente ></th>
+					<th>Cliente </th>
 				</tr>
 				
 			

@@ -69,6 +69,6 @@ public class CapacitacionController {
 			
 			model.put("capacitacion", capacitacion);
 			
-			return"redirect:/";
+			return"redirect:/Listarcapacitacion";
 		}
 }

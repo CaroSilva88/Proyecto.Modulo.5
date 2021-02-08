@@ -18,10 +18,11 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 <body class="card bg-light mb-3"; class= "body">
   
   <div class="superior">
-
+<br><br>
         <h1>SeguClap</h1>
    
-  </div>
+ <br><br>
+ 
   
   <div class="menunav">
   	                <!--  inicio  -->                              
@@ -90,7 +91,8 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
   
   
   </div>
-      
+  </div>  
+   <br><br>   
   <div class="contenedor">
         <h2 class="item-title text-center">Contexto</h2>
             
@@ -129,6 +131,7 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
           <div>
       		<h2>¿Tienes alguna Consulta?</h2>
      		 <h5>Deja tus datos en la casilla, nos pondremos en contacto prontamente</h5>
+    		 <br><br>
     		<div class="mb-3">
   				<label for="exampleFormControlInput1" class="form-label">Nombre y Apellido</label>
   				<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre Apellido">
@@ -147,7 +150,7 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 			</div>
 			
 			<button type="button" class="btn btn-outline-info">Enviar</button>
-    
+    <br><br>
 
       </div>
       
