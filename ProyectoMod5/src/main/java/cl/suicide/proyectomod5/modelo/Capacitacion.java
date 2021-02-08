@@ -31,7 +31,6 @@ public class Capacitacion {
 	/********************************
 	 * CONSTRUCTOR CON PARAMETROS
 	 ********************************/
-	
 	public Capacitacion(int capduracion, String capfecha, String caphora, String caplugar, int rutcliente,
 			int idcapacitacion) {
 		super();
@@ -42,7 +41,8 @@ public class Capacitacion {
 		this.rutcliente = rutcliente;
 		this.idcapacitacion = idcapacitacion;
 	}
-	
+
+
 	
 	/**************************
 	 * GETTERS Y SETTERS
@@ -51,6 +51,8 @@ public class Capacitacion {
 	public int getCapduracion() {
 		return capduracion;
 	}
+
+
 	public void setCapduracion(int capduracion) {
 		this.capduracion = capduracion;
 	}

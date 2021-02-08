@@ -123,7 +123,6 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 						<td><c:out value="${c.getCaplugar()}"></c:out></td>
 						<td><c:out value="${c.getRutcliente()}"></c:out></td>
 						<td><c:out value="${c.getIdcapacitacion()}"></c:out></td>
-
 					</tr>
 				</c:forEach>
 

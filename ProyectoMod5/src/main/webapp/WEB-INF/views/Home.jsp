@@ -125,6 +125,33 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
         profesionales del área, todo lo que necesitas en un solo lugar. Te invitamos a conocer nuestras plataformas.
         </p>
       </div>
+      <br><br>
+          <div>
+      		<h2>¿Tienes alguna Consulta?</h2>
+     		 <h5>Deja tus datos en la casilla, nos pondremos en contacto prontamente</h5>
+    		<div class="mb-3">
+  				<label for="exampleFormControlInput1" class="form-label">Nombre y Apellido</label>
+  				<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre Apellido">
+			</div>
+			<div class="mb-3">
+  				<label for="exampleFormControlInput1" class="form-label">Numero de contacto</label>
+  				<input type="number" class="form-control" id="exampleFormControlInput1" placeholder="(+569) 12345678">
+			</div>
+			<div class="mb-3">
+  				<label for="exampleFormControlInput1" class="form-label">Email</label>
+  				<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+			</div>
+			<div class="mb-3">
+  				<label for="exampleFormControlTextarea1" class="form-label">Escribe tus consultas</label>
+  				<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+			</div>
+			
+			<button type="button" class="btn btn-outline-info">Enviar</button>
+    
+
+      </div>
+      
+      
 </body>
 </body>
 </html>
