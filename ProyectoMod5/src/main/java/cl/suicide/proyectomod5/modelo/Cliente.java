@@ -8,8 +8,8 @@ public class Cliente {
 	
 	@Id
 	private int rutcliente;
-	private String clinombre;
-	private String cliapellido;
+	private String clinombres;
+	private String cliapellidos;
 	private String clitelefono;
 	private String afp;
 	private int clisistemasalud;
@@ -30,12 +30,12 @@ public class Cliente {
 	 * CONSTRUCTOR CON PARAMETROS
 	 ********************************/
 	
-	public Cliente(int rutcliente, String clinombre, String cliapellido, String clitelefono, String afp,
+	public Cliente(int rutcliente, String clinombres, String cliapellidos, String clitelefono, String afp,
 			int clisistemasalud, String clidireccion, String clicomuna, int cliedad, int run_cliente) {
 		super();
 		this.rutcliente = rutcliente;
-		this.clinombre = clinombre;
-		this.cliapellido = cliapellido;
+		this.clinombres = clinombres;
+		this.cliapellidos = cliapellidos;
 		this.clitelefono = clitelefono;
 		this.afp = afp;
 		this.clisistemasalud = clisistemasalud;
@@ -53,17 +53,17 @@ public class Cliente {
 	public void setRutcliente(int rutcliente) {
 		this.rutcliente = rutcliente;
 	}
-	public String getClinombre() {
-		return clinombre;
+	public String getClinombres() {
+		return clinombres;
 	}
-	public void setClinombre(String clinombre) {
-		this.clinombre = clinombre;
+	public void setClinombres(String clinombres) {
+		this.clinombres = clinombres;
 	}
-	public String getCliapellido() {
-		return cliapellido;
+	public String getCliapellidos() {
+		return cliapellidos;
 	}
-	public void setCliapellido(String cliapellido) {
-		this.cliapellido = cliapellido;
+	public void setCliapellido(String cliapellidos) {
+		this.cliapellidos = cliapellidos;
 	}
 	public String getClitelefono() {
 		return clitelefono;

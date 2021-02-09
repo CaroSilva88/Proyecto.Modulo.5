@@ -26,27 +26,32 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 
       <div class="menunav">
 
-                <!--  inicio  -->                              
+        <!--  inicio  -->                              
  
     <div>
         <div class="header-dark">
             <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
                 <div class="container">
-                	<a class="navbar-brand" href="#">Crear Pago</a>
+                	<a class="navbar-brand" href="#">Registro de Profesional</a>
 					<button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
 						<span class="sr-only">Menu de navegacion</span><span class="navbar-toggler-icon"></span>
 					</button>
                     <div class="collapse navbar-collapse" id="navcol-1">
-                        <ul class="nav navbar-nav">
-                      <!--   <li class="nav-item" role="presentation">
-                            	<a class="nav-link" href="#">Usuario</a>
-                            </li> -->     
+                        <ul class="nav navbar-nav">    
                             <li class="dropdown">
-                            	<a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Usuario </a>
+                            	<a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Usuarios </a>
+                            		                                
 	                                <div class="dropdown-menu" role="menu">
-	                                	<a class="dropdown-item" role="presentation" href="#">Listado de Usuarios</a>
-	                                	<a class="dropdown-item" role="presentation" href="#">Nuevo</a>
+	                                <a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Listado de Usuarios </a>
+	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/ListarCliente">Listado de Clientes</a>
+	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/ListarProfesional">Listado de Profesionales</a>
+	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/ListarAdministrativo">Listado de Administrativos</a>
+	                                	<a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Nuevos Usuarios </a>
+	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/crearCliente">Crear Cliente</a>
+	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/crearProfesional">Crear Profesional</a>
+	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/crearAdministrativo">Crear Administrativo</a>
 	                                </div>
+	                              
                             </li>
                             <li class="dropdown">
                             	<a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Capacitación </a>
@@ -62,17 +67,12 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/crearVisita">Crear</a>
 	                                </div>
                             </li>
-                            
                             <li class="dropdown">
                             	<a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Pago </a>
 	                                <div class="dropdown-menu" role="menu">
 	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/listarPago">Listar</a>
 	                                	<a class="dropdown-item" role="presentation" href="${pageContext.request.contextPath}/crearPago">Crear</a>
 	                                </div>
-                            </li>
-                            
-                            <li class="nav-item" role="presentation">
-                            	<a class="nav-link" href="#">Contacto</a>
                             </li>
                             <li class="nav-item" role="presentation">
                             	<a class="nav-link" href="${pageContext.request.contextPath}/">Home</a>

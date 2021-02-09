@@ -1,6 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="false" %>
+
 <html>
 <head>
   <!-- JavaScript Bundle with Popper -->
@@ -9,24 +9,22 @@ integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroa
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
 integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-<meta charset="ISO-8859-1">
-<link rel="stylesheet" href="resources/css/estilos.css" type="text/css">
-<script src="js/jquery-3.5.1.min.js"></script>	
-<title>Visitas realizadas</title>
-</head>
-<body>
 
-        
-    <body>
-    
-      <div class="superior">
+<meta charset="ISO-8859-1">
+<title>Registro de Profesional</title>
+	<link rel="stylesheet" href="resources/css/estilos.css" type="text/css">	
+</head>
+
+	<div class="superior">
 <br><br>
         <h1>SeguClap</h1>
-<h3>"Soluciones a tu medida"</h3>
+        <h3>"Soluciones a tu medida"</h3>
+ 
+    
 
-<br><br>
-
-      <div class="menunav">
+     <div class="menunav">
+    
+     <br><br>
 
         <!--  inicio  -->                              
  
@@ -94,122 +92,60 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script> 
                      
- <!--  fin  --> 
- 
+ <!--  fin  -->        
       </div>
+      
       </div>
-<br><br>
+
 
       <div class="encabezado">
-
-        <h1>Registro de Visita</h1>
+<br><br>
+        <h1>Registro de Profesional</h1>
 
       </div>
-    
-        <div class="contenedor">
+<br><br>
+<body>
+
+<div class="contenedor">
             <div class="formulario">
-				<form method="post" action="${pageContext.request.contextPath}/visitacreada" id="formulario">
+				<form method="post" action="${pageContext.request.contextPath}/profesionalcreado" id="formulario">
 					<br><br>
-					<div class="campo">
-                         <label for="id">ID:</label>
-                         <input type="number" id="id" name="idvisita" placeholder="ID" required/>
+                    <div class="en-linea izquierdo">
+						<label for="run_pro">RUN:</label>
+						<input type="number" id="run_pro" name="run_pro" placeholder="RUN PROFESIONAL" required/>
                     </div>
 					<br><br>
                     <div class="en linea">
-						<label for="fecha">Fecha:</label>
-                        <input type="text" id="fecha" name="visfecha" placeholder="FECHA" required/>
+						<label for="nombres">Nombres:</label>
+                        <input type="text" id="nombres" name="nombres" placeholder="NOMBRES" required/>
 					</div>
                 <div class="campo">
                 	<div class="en-linea izquierdo">
-						<label for="hora">Hora</label>
-						<input type="text" id="hora" name="vishora" placeholder="HORA" required/>
+						<label for="apellidos">Apellidos:</label>
+						<input type="text" id="apellidos" name="apellidos" placeholder="APELLIDOS" required/>
 				    </div>
                     <br><br>
 					<div class="en linea">
-						<label for="Lugar">Lugar:</label>
-                        <input type="text" id="Lugar" name="vislugar" placeholder="LUGAR" required/>
+						<label for=" telefono"> Telefono:</label>
+                        <input type="text" id="telefono" name=" telefono" placeholder=" TELEFONO" required/>
 					</div>
 				</div>
+					<div class="en-linea izquierdo">
+						<label for="area">Titulo:</label>
+						<input type="text" id="titulo" name="titulo" placeholder="AREA" required/>
+                    </div>
+                    <br><br>
 				     <div class="en-linea">
-						<label for="cliente">Cliente:</label>
-						<input type="number" id="cliente" name="rutcliente" placeholder="CLIENTE" required/>
-                    </div>
-                     <br><br>
-                     <h3>Chequeos Realizados en la visita</h3><br><br>
-                    <div class="form-check">
-  						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="chequeo">
- 						 <label class="form-check-label" for="flexCheckDefault">
-   								Temperaturas
-  						</label>
-					</div>
-					<div class="form-check">
- 						 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="chequeo">
-  						 <label class="form-check-label" for="flexCheckDefault">
-   									 Zona Limpia
-  						 </label>
-					</div>
-					 <div class="form-check">
-  						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="chequeo">
- 						 <label class="form-check-label" for="flexCheckDefault">
-   								 Uso Mascarilla
-  						</label>
-					</div>
-					<div class="form-check">
- 						 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="chequeo">
-  						 <label class="form-check-label" for="flexCheckDefault">
-   									 Contaminacion cruzada
-  						 </label>
-					</div>
-					                    <div class="form-check">
-  						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="chequeo">
- 						 <label class="form-check-label" for="flexCheckDefault">
-   								Sanitizacion
-  						</label>
-					</div>
-					<div class="form-check">
- 						 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="chequeo">
-  						 <label class="form-check-label" for="flexCheckDefault">
-   									 Limpieza camarines
-  						 </label>
-					</div>
-					                    <div class="form-check">
-  						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="chequeo">
- 						 <label class="form-check-label" for="flexCheckDefault">
-   								 Procedimiento de lavado de manos
-  						</label>
-					</div>
-					<div class="form-check">
- 						 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="chequeo">
-  						 <label class="form-check-label" for="flexCheckDefault">
-   									 Limpieza de pisos
-  						 </label>
-					</div>
-					<div class="form-check">
- 						 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="chequeo">
-  						 <label class="form-check-label" for="flexCheckDefault">
-   									 Uso correcto de alcohol gel y desinfectantes
-  						 </label>
-					</div>					
-					<div class="form-check">
- 						 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="chequeo">
-  						 <label class="form-check-label" for="flexCheckDefault">
-   									Control de inventario y fechas
-  						 </label>
-					</div>					
-
-					<br><br>
-                    <div class="input-group">
-                         <span class="input-group-text">Comentarios</span>
-                         <textarea class="form-control" aria-label="With textarea" name="viscomentarios"></textarea>
-                    </div>
-
-
+						<label for="proyecto_qejecuta">Proyecto Asignado:</label>
+						<input type="text" id="proyecto_qejecuta" name="proyecto_qejecuta" placeholder="proyecto_qejecuta" required/>
+                    </div> 
+				
                 <div class="botones">
-                    <button  type="submit" id="boton-enviar" >Guardar Datos</button>
+                    <button  type="submit" id="boton-enviar" >Enviar</button>
                 </div>
-            </form>
-          </div>
+               </form>
+            </div>
         </div>
-    </body>
+
 </body>
 </html>
