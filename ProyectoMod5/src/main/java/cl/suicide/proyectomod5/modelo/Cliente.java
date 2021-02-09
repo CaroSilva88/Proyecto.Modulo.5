@@ -11,7 +11,7 @@ public class Cliente {
 	private String clinombres;
 	private String cliapellidos;
 	private String clitelefono;
-	private String afp;
+	private String cliafp;
 	private int clisistemasalud;
 	private String clidireccion;
 	private String clicomuna;
@@ -30,14 +30,14 @@ public class Cliente {
 	 * CONSTRUCTOR CON PARAMETROS
 	 ********************************/
 	
-	public Cliente(int rutcliente, String clinombres, String cliapellidos, String clitelefono, String afp,
+	public Cliente(int rutcliente, String clinombres, String cliapellidos, String clitelefono, String cliafp,
 			int clisistemasalud, String clidireccion, String clicomuna, int cliedad, int run_cliente) {
 		super();
 		this.rutcliente = rutcliente;
 		this.clinombres = clinombres;
 		this.cliapellidos = cliapellidos;
 		this.clitelefono = clitelefono;
-		this.afp = afp;
+		this.cliafp = cliafp;
 		this.clisistemasalud = clisistemasalud;
 		this.clidireccion = clidireccion;
 		this.clicomuna = clicomuna;
@@ -71,11 +71,11 @@ public class Cliente {
 	public void setClitelefono(String clitelefono) {
 		this.clitelefono = clitelefono;
 	}
-	public String getAfp() {
-		return afp;
+	public String getCliafp() {
+		return cliafp;
 	}
-	public void setAfp(String afp) {
-		this.afp = afp;
+	public void setAfp(String cliafp) {
+		this.cliafp = cliafp;
 	}
 	public int getClisistemasalud() {
 		return clisistemasalud;

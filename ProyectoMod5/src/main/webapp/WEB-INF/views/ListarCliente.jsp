@@ -126,7 +126,7 @@ integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKm
 				<c:forEach var="cl" items="${cliente}">
 					<tr>
 						<th><c:out value="${cl.getRutcliente()}"></c:out></th>
-						<td><c:out value="${cl.getClinombre()}"></c:out></td>
+						<td><c:out value="${cl.getClinombres()}"></c:out></td>
 						<td><c:out value="${cl.getClitelefono()}"></c:out></td>
 						<td><c:out value="${cl.getClidireccion()}"></c:out></td>
 						<td><c:out value="${cl.getCliedad()}"></c:out></td>
